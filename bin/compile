@@ -18,7 +18,9 @@ cd $BUILD_DIR
 
 #
 # https://github.com/cloudfoundry-incubator/diego-release/issues/114
-# 
+#
+# You cannot get root in a buildpack lifecycle container. The vcap account in the root file system is explicitly disabled in /etc/passwd and there is no password defined for the user in /etc/shadow.
+#
 
 gcc app.c -o app
 
