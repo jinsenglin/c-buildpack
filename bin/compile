@@ -11,7 +11,8 @@ set -o pipefail
 
 cd $BUILD_DIR
 
-aptitude show sshpass
+#aptitude show sshpass # not installed
+whoami # vcap
 # echo c1oudc0w | sudo -S aptitude show openssh-server
 
 gcc app.c -o app
