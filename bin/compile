@@ -11,7 +11,8 @@ set -o pipefail
 
 cd $BUILD_DIR
 
-echo c1oudc0w | sudo -S aptitude show openssh-server
+aptitude show sshpass
+# echo c1oudc0w | sudo -S aptitude show openssh-server
 
 gcc app.c -o app
 
