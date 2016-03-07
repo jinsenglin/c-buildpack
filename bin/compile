@@ -12,7 +12,7 @@ set -o pipefail
 cd $BUILD_DIR
 
 #aptitude show curl # State: installed
-aptitude show sshpass # not installed
+#aptitude show sshpass # State: not installed
 #whoami # vcap
 #sudo aptitude show openssh-server # sudo: no tty present and no askpass program specified
 # echo c1oudc0w | sudo -S aptitude show openssh-server # [sudo] password for vcap: Sorry, try again
