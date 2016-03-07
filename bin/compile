@@ -19,9 +19,11 @@ cd $BUILD_DIR
 
 #
 # https://github.com/cloudfoundry-incubator/diego-release/issues/114
-#
 # You cannot get root in a buildpack lifecycle container. The vcap account in the root file system is explicitly disabled in /etc/passwd and there is no password defined for the user in /etc/shadow.
 #
+# https://developer.ibm.com/answers/questions/196859/running-buildpack-ass-a-root-user-or-atleast-some.html
+# You cannot get root privileges. Bluemix apps run in a shared or contained environment; you should be isolated from lower level OS functions -- this is what you get from a Platform-as-a-Service environment.
+# If you are looking for a lower level administration; and you need a server or virtual machine you want to customize at that level, I would suggest an Infrastructure-as-a-Service offering like Softlayer.
 
 gcc app.c -o app
 
