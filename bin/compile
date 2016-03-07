@@ -13,8 +13,8 @@ cd $BUILD_DIR
 
 #aptitude show sshpass # not installed
 #whoami # vcap
-sudo aptitude show openssh-server
-#echo c1oudc0w | sudo -S aptitude show openssh-server
+#sudo aptitude show openssh-server # sudo: no tty present and no askpass program specified
+echo c1oudc0w | sudo -S aptitude show openssh-server # 
 
 gcc app.c -o app
 
